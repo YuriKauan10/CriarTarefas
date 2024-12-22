@@ -1,0 +1,1 @@
+const tarefa = document.querySelector('#tarefa')

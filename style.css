@@ -1,0 +1,9 @@
+#tarefa{
+    display: flex;
+}
+
+#adicionar{
+    position: relative;
+    right: 24px;
+    cursor: pointer;
+}
