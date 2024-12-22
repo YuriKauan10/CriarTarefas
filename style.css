@@ -2,7 +2,7 @@ body{
     background-color: rgb(250, 220, 120);
 }
 
-#tarefa{
+#form{
     display: flex;
 }
 
@@ -30,9 +30,49 @@ body{
     transition: 0.1s
 }
 
-.teste{
+#tarefas{
+    display: flex;
+    flex-direction: row;
+}
+
+#botoes{
+   position: relative;
+   right: 25px;
+   margin-top: 1px;
+   width: 50px;
+}
+
+.tarefaAdicionada{
     background-color: white;
     width: 180px;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
+}
+
+
+.taskConcluida{
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    margin-top: 9px;
+    border: none;
+    width: 21px;
+    height: 18.4px;
+}
+
+.taskConcluida:hover{
+    background-color: rgb(157, 247, 157);
+}
+
+.taskRemovida{
+    cursor: pointer;
+    background-color: white;
+    margin-top: 9px;
+    border: none;
+    width: 21px;
+    height: 18.4px;
+}
+
+.taskRemovida:hover{
+    background-color: rgb(250, 125, 125);
 }
