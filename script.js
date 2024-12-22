@@ -4,16 +4,27 @@ const tarefaInput = document.querySelector('#tarefaInput')
 const adicionar = document.querySelector('#adicionar')
 const botoes = document.querySelector('#botoes')
 const tarefas = document.querySelector('#tarefas')
-const divBranca = document.querySelector('#divBranca')
 
 
 adicionar.addEventListener('click', () => {
     
-    const div = document.createElement('div')
-    div.classList.add('tarefaAdicionada')
-    div.textContent = tarefaInput.value
+    const divBranca = document.createElement('div')
+    divBranca.classList.add('divBranca')
+    tarefas.appendChild(divBranca)
 
-    divBranca.appendChild(div)
+    const divP = document.createElement('div')
+    divP.classList.add('divP')
+    divBranca.appendChild(divP)
+
+    const p = document.createElement('p')
+    p.classList.add('tarefaAdicionada')
+    p.textContent = tarefaInput.value
+    divP.appendChild(p)
+
+    const divBotao = document.createElement('div')
+    divBotao.classList.add('divBotao')
+    divBranca.appendChild(divBotao)
+
 
     const taskConcluida = document.createElement('button')
     taskConcluida.textContent = '✓'
@@ -23,7 +34,7 @@ adicionar.addEventListener('click', () => {
     taskRemovida.textContent = '✕'
     taskRemovida.classList.add('taskRemovida')
     
-    botoes.appendChild(taskConcluida)
-    botoes.appendChild(taskRemovida)
+    divBotao.appendChild(taskConcluida)
+    divBotao.appendChild(taskRemovida)
     
 })

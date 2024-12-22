@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body{
     background-color: rgb(250, 220, 120);
 }
@@ -14,12 +19,11 @@ body{
     outline: none;
 }
 
-
-
 #adicionar{
     background-color: white;
     border: none;
     position: relative;
+    width: 20px;
     right: 20px;
     cursor: pointer;
     color: rgb(44, 44, 44);
@@ -32,42 +36,53 @@ body{
 
 #tarefas{
     display: flex;
+    flex-direction: column;
+}
+
+.divBranca{
+    display: flex;
     flex-direction: row;
-}
-
-#botoes{
-   position: relative;
-   right: 25px;
-   margin-top: 1px;
-   width: 50px;
-}
-
-.tarefaAdicionada{
+    align-items: center;
     background-color: white;
-    width: 180px;
+    width: 140px;
+    height: 18.3px;
+    margin-top: 9px;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10px 0px 0px 0px;
 }
 
+.divBotao{
+    display: flex;
+    justify-content: end;
+    width: 140px;
+}
 
 .taskConcluida{
+    all: unset;
+    font-size: 13px;
     text-align: center;
     cursor: pointer;
-    background-color: white;
-    margin-top: 9px;
+    background-color: none;
     border: none;
     width: 21px;
     height: 18.4px;
 }
+
+.divP{
+    width: 260px;
+    overflow: hidden;  
+}
+
 
 .taskConcluida:hover{
     background-color: rgb(157, 247, 157);
 }
 
 .taskRemovida{
+    all: unset;
+    font-size: 13px;
+    text-align: center;
     cursor: pointer;
-    background-color: white;
-    margin-top: 9px;
+    background-color: none;
     border: none;
     width: 21px;
     height: 18.4px;
