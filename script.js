@@ -5,9 +5,14 @@ const adicionar = document.querySelector('#adicionar')
 const botoes = document.querySelector('#botoes')
 const tarefas = document.querySelector('#tarefas')
 
+let numeroClasses = -1
+let arrayTarefas = []
 
 adicionar.addEventListener('click', () => {
     
+    numeroClasses++
+    console.log(numeroClasses)
+
     const divBranca = document.createElement('div')
     divBranca.classList.add('divBranca')
     tarefas.appendChild(divBranca)
@@ -36,5 +41,19 @@ adicionar.addEventListener('click', () => {
     
     divBotao.appendChild(taskConcluida)
     divBotao.appendChild(taskRemovida)
-    
+
+    arrayTarefas.push(divBranca)
+
+    document.body.addEventListener('click', (e) => {
+        const {target} = e
+        if(target.className == 'taskConcluida'){
+            console.log('concluida')
+        }else if(target.className == 'taskRemovida'){
+            console.log('removida')
+        }
+    })
+
 })
+
+
+
