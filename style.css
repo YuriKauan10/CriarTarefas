@@ -1,9 +1,38 @@
+body{
+    background-color: rgb(250, 220, 120);
+}
+
 #tarefa{
     display: flex;
 }
 
+#tarefaInput{
+    border: none;
+}
+
+#tarefaInput:focus{
+    outline: none;
+}
+
+
+
 #adicionar{
+    background-color: white;
+    border: none;
     position: relative;
-    right: 24px;
+    right: 20px;
     cursor: pointer;
+    color: rgb(44, 44, 44);
+}
+
+#adicionar:hover{
+    background-color: rgb(253, 251, 143);
+    transition: 0.1s
+}
+
+.teste{
+    background-color: white;
+    width: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0px 10px 0px;
 }
