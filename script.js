@@ -9,9 +9,6 @@ let numeroClasses = -1
 let arrayTarefas = []
 
 adicionar.addEventListener('click', () => {
-    
-    numeroClasses++
-    console.log(numeroClasses)
 
     const divBranca = document.createElement('div')
     divBranca.classList.add('divBranca')
@@ -24,6 +21,9 @@ adicionar.addEventListener('click', () => {
     const p = document.createElement('p')
     p.classList.add('tarefaAdicionada')
     p.textContent = tarefaInput.value
+    if(tarefaInput.value.length === 0){
+        p.textContent = '-Vazio-'
+    } 
     divP.appendChild(p)
 
     const divBotao = document.createElement('div')
@@ -42,18 +42,28 @@ adicionar.addEventListener('click', () => {
     divBotao.appendChild(taskConcluida)
     divBotao.appendChild(taskRemovida)
 
-    arrayTarefas.push(divBranca)
 
     document.body.addEventListener('click', (e) => {
         const {target} = e
+
         if(target.className == 'taskConcluida'){
-            console.log('concluida')
+            teste++
+            let paiBotao = target.parentElement
+            let paiDoPai = paiBotao.parentElement
+            let divParagrafo = paiDoPai.firstElementChild
+            divParagrafo.classList.add('pConcluido')
+            paiDoPai.classList.add('concluida')
         }else if(target.className == 'taskRemovida'){
-            console.log('removida')
+           let botaoConcluido = target.previousSibling
+           let divBotaoSelect = botaoConcluido.parentElement
+           let paiDaDiv = divBotaoSelect.parentElement
+
+           try {
+            tarefas.removeChild(paiDaDiv)
+        
+           } catch (error) {if(!error){}}
         }
     })
 
 })
-
-
 

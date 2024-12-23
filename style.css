@@ -50,11 +50,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.concluida{
-    
-}
-
-
 .divBotao{
     display: flex;
     justify-content: end;
@@ -72,14 +67,30 @@ body{
     height: 18.4px;
 }
 
+.concluida{
+    background-color: rgb(145, 253, 102);
+    transition: 1s;
+}
+
+.pConcluido{
+    text-decoration: line-through;
+    font-style: italic;
+    transition: 1s;
+}
+
 .divP{
-    width: 260px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.tarefaAdicionada{
     overflow: hidden;  
+    text-overflow: ellipsis;
 }
 
 
 .taskConcluida:hover{
-    background-color: rgb(157, 247, 157);
+    background-color: rgb(121, 250, 121);
 }
 
 .taskRemovida{
