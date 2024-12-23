@@ -42,7 +42,7 @@ adicionar.addEventListener('click', () => {
     divBotao.appendChild(taskConcluida)
     divBotao.appendChild(taskRemovida)
 
-
+    let teste = 0
     document.body.addEventListener('click', (e) => {
         const {target} = e
 
@@ -51,6 +51,7 @@ adicionar.addEventListener('click', () => {
             let paiBotao = target.parentElement
             let paiDoPai = paiBotao.parentElement
             let divParagrafo = paiDoPai.firstElementChild
+            console.log('eae')
             divParagrafo.classList.add('pConcluido')
             paiDoPai.classList.add('concluida')
         }else if(target.className == 'taskRemovida'){
