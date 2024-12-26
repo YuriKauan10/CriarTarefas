@@ -43,12 +43,21 @@ adicionar.addEventListener('click', () => {
     taskConcluida.textContent = '✓'
     taskConcluida.classList.add('taskConcluida')
 
+    let boolean = true
+    
     taskConcluida.addEventListener('click', (e) => {
         const {target} = e
         const botaodiv = target.parentElement
         const divprincipal = botaodiv.parentElement
-        divprincipal.classList.add('concluida')
-        divprincipal.firstElementChild.style.textDecoration = 'line-through'
+        if(boolean){
+            divprincipal.classList.add('concluida')
+            divprincipal.firstElementChild.classList.add('pConcluido')
+        }else{
+            divprincipal.classList.remove('concluida')
+            divprincipal.firstElementChild.classList.remove('pConcluido')
+        }
+
+        boolean = !boolean
     })
 
     taskRemovida = document.createElement('button')
