@@ -3,7 +3,8 @@ const divTarefa = document.querySelector('#form')
 const tarefaInput = document.querySelector('#tarefaInput')
 const adicionar = document.querySelector('#adicionar')
 const botoes = document.querySelector('#botoes')
-const tarefas = document.querySelector('#tarefas')          // Puxando elementos do html
+const tarefas = document.querySelector('#tarefas')
+const segundoTitulo = document.querySelector('#tituloTarefa')     // Puxando elementos do html
 
 let arrayTarefas = [] // declaração de um array que vai receber cada tarefa 
 
@@ -14,8 +15,12 @@ let divBotao
 let taskConcluida
 let taskRemovida
 
+segundoTitulo.style.display = 'none'
+
 adicionar.addEventListener('click', () => { // evento de adicionar a div, criação de novos elementos e classes
 
+    segundoTitulo.style.display = 'flex'
+    
     divBranca = document.createElement('div')
     divBranca.classList.add('divBranca')       // Div principal onde vai ser inserido o texto e os botões
     tarefas.appendChild(divBranca) 
